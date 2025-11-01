@@ -4,7 +4,7 @@ if ! type "home-manager" > /dev/null; then
 	nix-shell '<home-manager>' -A install
 fi
 
-LINKS=("nvim" "hypr" "kitty" "tms")
+LINKS=("nvim" "hypr" "kitty" "tms" "wofi")
 
 for link in "${LINKS[@]}"
 do
@@ -14,3 +14,6 @@ done
 
 rm -f $HOME/.tmux.conf
 ln -s $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
+
+rm -f "$HOME/.local/share/icons"
+ln -s $HOME/dotfiles/icons "$HOME/.local/share/icons"
