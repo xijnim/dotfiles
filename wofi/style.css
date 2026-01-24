@@ -1,3 +1,20 @@
 window {
     font-size: 28px;
+    background-color: --wofi-color0;
+}
+
+#input {
+    color: --wofi-color3;
+    background-color: --wofi-color4;
+}
+
+#entry:selected {
+    background-color: --wofi-color4;
+}
+#text:selected {
+    color: --wofi-color3;
+}
+
+* {
+    font-family: "JetbrainsMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
 }

@@ -56,9 +56,9 @@ button:hover {
 }
 
 #workspaces {
-    background-color: #39a441;
+    background-color: #33984b;
 
-    border: 4px solid #272135;
+    border: 4px solid #070a05;
     border-bottom: 0;
 
     padding: 0 .25em;
@@ -69,7 +69,7 @@ button:hover {
 
 #workspaces button {
     padding: 0 5px;
-    background-color: #e6cb47;
+    background-color: #ffc900;
     color: #425e9a;
     margin-right: .25em;
     margin-left: .25em;
@@ -113,7 +113,7 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-    border: 4px solid #272135;
+    border: 4px solid #070a05;
     border-bottom: 0;
     padding: 0 10px;
     color: #ffffff;
@@ -146,8 +146,13 @@ button:hover {
 
 #battery.charging, #battery.plugged, #battery {
     color: #ffffff;
-    background-color: #26A65B;
+    background-color: #33984b;
+}
+#battery.plugged, #battery {
     padding-right: 1.1em;
+}
+#battery.charging {
+    padding-right: .55em;
 }
 
 @keyframes blink {
@@ -179,7 +184,7 @@ button:hover {
 }
 
 #power-profiles-daemon.balanced {
-    background-color: #2980b9;
+    background-color: #0098dc;
     color: #ffffff;
 }
 
@@ -221,13 +226,13 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #e6cb47;
+    background-color: #ffc825;
     color: #000000;
     padding-right: 1.15em;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
+    background-color: #b4eff1;
     color: #2a5c45;
 }
 
@@ -276,7 +281,7 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    background-color: #1a1932;
     padding-right: 1.2em;
 }
 

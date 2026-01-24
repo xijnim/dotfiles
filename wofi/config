@@ -1,0 +1,12 @@
+allow_images=true
+allow_markup=true
+gtk_dark=true
+key_up=Ctrl-p
+key_down=Ctrl-n
+normal_window=true
+#hide_scroll=true
+insensitive=true
+colors=colors
+key_submit=Ctrl-y
+key_expand=Ctrl-e
+close_on_focus_loss=true

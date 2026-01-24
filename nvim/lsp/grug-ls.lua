@@ -7,7 +7,7 @@
 ---@type vim.lsp.Config
 
 return {
-    cmd = { 'grug-ls' },
+    cmd = { '/home/xijnim/Projects/grug-ls/target/debug/grug-ls' },
     filetypes = { 'grug' },
     root_markers = { "mod_api.json" },
     single_file_support = false,

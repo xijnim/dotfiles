@@ -3,7 +3,7 @@ search_submodules = false
 recursive_submodules = false
 switch_filter_unknown = false
 session_sort_order = "Alphabetical"
-excluded_dirs = []
+excluded_dirs = ["target", "node_modules", ".git"]
 sessions = []
 bookmarks = []
 clone_repo_switch = "Always"
@@ -11,7 +11,7 @@ vcs_providers = ["git"]
 
 [[search_dirs]]
 path = "/home/xijnim/Projects"
-depth = 10
+depth = 1
 
 [picker_colors]
 highlight_color = "LightBlue"

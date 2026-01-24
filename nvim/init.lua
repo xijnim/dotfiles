@@ -21,6 +21,8 @@ vim.keymap.set("n", "<C-l>", "<C-w>l")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
+vim.keymap.set("v", "p", "P")
+
 vim.pack.add({
     { src = "https://github.com/nvim-lua/plenary.nvim" },
     { src = "https://github.com/nvim-telescope/telescope.nvim" },
@@ -82,7 +84,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
     command = "norm zR",
 })
 vim.treesitter.language.register('grug', { 'grug' })
--- require("nvim-treesitter").install("grug")
+require("nvim-treesitter").install("grug")
 
 vim.keymap.set("n", "<leader>it", "<cmd>InspectTree<cr>")
 vim.keymap.set("n", "<leader>li", "<cmd>checkhealth vim.lsp<cr>")
@@ -90,14 +92,22 @@ vim.keymap.set("n", "<F3>", vim.lsp.buf.format)
 vim.keymap.set("n", "gd", vim.lsp.buf.definition)
 vim.keymap.set("n", "gR", vim.lsp.buf.rename)
 
+vim.keymap.set("n", "<leader>id", function()
+    vim.diagnostic.open_float()
+end)
+
 vim.keymap.set("n", "<C-c>", "<Esc><cmd>noh<cr>")
 
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("rust_analyzer")
+vim.lsp.enable("zls")
 vim.lsp.enable("grug-ls")
+vim.lsp.enable("gmls")
 vim.lsp.enable("gopls")
+vim.lsp.enable("pyright")
 vim.lsp.enable("clangd")
 vim.lsp.enable("nil_ls")
+vim.lsp.enable("gleam")
 
 vim.keymap.set("n", "<leader>pv", "<cmd>Ex<cr>")
 vim.keymap.set("n", "<leader>fs", "<cmd>Telescope find_files<cr>")

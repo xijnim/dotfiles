@@ -64,8 +64,9 @@
     wget
     kitty
     git
-    freerdp
   ];
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables.EDITOR = "nvim";
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
@@ -80,10 +81,6 @@
     };
   };
 
-  services.xrdp = {
-    enable = true;
-  };
-
   programs.hyprland.enable = true;
   programs.xwayland.enable = true;
 
@@ -93,7 +90,21 @@
 
   services.openssh.enable = true;
   services.preload.enable = true;
-  services.power-profiles-daemon.enable = true;
+  # services.power-profiles-daemon.enable = true;
+
+  hardware.bluetooth.enable = true;
+
+  services.auto-cpufreq.enable = true;
+  services.auto-cpufreq.settings = {
+    battery = {
+       governor = "powersave";
+       turbo = "never";
+    };
+    charger = {
+       governor = "performance";
+       turbo = "auto";
+    };
+  };
 
   system.stateVersion = "25.05";
 }
